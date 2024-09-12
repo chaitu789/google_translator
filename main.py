@@ -118,7 +118,7 @@ def text_to_speech(text, lang_code):
 def audio_player(audio_file):
     try:
         audio_file.seek(0)
-        audio = AudioSegment.from_file(audio_file, format="wav")  # Adjust format based on actual file
+        audio = AudioSegment.from_file(audio_file, format="wav")  
         st.audio(audio_file, format="audio/wav")
     except CouldntDecodeError:
         st.error("Error decoding the audio file. Ensure the file is in a supported format and not corrupted.")
